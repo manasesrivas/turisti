@@ -1,0 +1,147 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 06-12-2023, 11:51:35 AM
+    Author     : 50370
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contendorImgNombre{
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.containerText{
+    margin-top: 50px;
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.imgLugar{
+    height: 400px;
+    transform: translate(50px, -50px);
+    animation: slider 2s ease;
+}
+
+
+.containerImg{
+    background: #f6a700; 
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.Link{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.link{
+    text-align: end;
+    height: 35px;
+    width: 130px;    
+    background-color: yellow;
+    display: grid;
+    place-content: center;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+
+
+.buttonMostrarMapa{
+    font-size: 15px;
+    height: 35px;
+    width: 140px;     
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border:none;
+    border-radius: 3px;
+    background: yellow;
+    cursor:pointer;
+
+}
+
+.containerMap{
+    position:fixed;
+    transform: translateY(100%);
+    transition: transform 1s ease-in-out;
+}
+
+.containerMap, iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.buttonExit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border:none;    
+    height: 40px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+
+
+/* #########################################################animaciones */
+@keyframes slider {
+    from{
+        transform: translate(0,0);
+    }
+}
+
+
+.mostrarText{
+    transform: translateX(0);
+}
+
+.mostrarImg{
+    transform: translateX(0);
+}
+
+.quitarOpacidad{
+    opacity: 1;
+}
+
+.mostrarMapa{
+    transform: translateY(0);
+}
+
+/* ###################################### fin animaciones ############################### */
